@@ -1,64 +1,162 @@
-/* Basic Reset */
-* {
+body {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body Styling */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    background: #f4f4f4;
     color: #333;
-    padding: 20px;
+}
+header {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
-/* Header Styling */
-header {
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    z-index: 1;
+    position: relative;
+}
+
+header p {
+    font-size: 1.2em;
+    z-index: 1;
+    position: relative;
+}
+
+header .cta {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: #110635;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 30px;
+    transition: background 0.3s ease;
+    z-index: 1;
+    position: relative;
+}
+
+header .cta:hover {
+    background: #e5533c;
+}
+
+.trends, .insights {
+    padding: 50px 20px;
+    text-align: center;
+    background: #eef2f7;
+}
+
+.trends .container, .insights .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.trends h2, .insights h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.trend, .insight {
+    margin-bottom: 40px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trend:hover, .insight:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.trend h3, .insight h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.trend p, .insight p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+.cta-section {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #6f7d9a, #a242ac);
+    color: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.cta-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    z-index: 1;
+    position: relative;
+}
+
+.cta-section .cta {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #007bff;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 30px;
+    transition: background 0.3s ease;
+    z-index: 1;
+    position: relative;
+}
+
+.cta-section .cta:hover {
+    background: #0056b3;
+}
+footer{
     background: #333;
     color: #fff;
     padding: 20px 0;
     text-align: center;
 }
 
-/* Navigation Styling */
-nav {
-    background: #444;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
+footer p {
+    margin: 0;
 }
 
-nav ul {
-    list-style: none;
-}
+@media (min-width: 768px) {
+    .trends, .insights {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
 
-nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-/* Section Styling */
-section {
-    margin: 20px 0;
-    padding: 20px;
-    background: #f4f4f4;
-    border: 1px solid #ddd;
-}
-
-section h2 {
-    margin-bottom: 10px;
-}
-
-/* Footer Styling */
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background: #333;
-    color: #fff;
+    .trend, .insight {
+        flex: 1 1 calc(33% - 40px);
+        margin: 20px;
+      }
 }
